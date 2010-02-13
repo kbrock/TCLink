@@ -1,2 +1,5 @@
 rb_tclink.o: rb_tclink.c tclink.h config.h
 tclink.o: tclink.c tclink.h config.h
+print:
+        @echo "installing $(RUBYARCHDIR)/$(DLLIB)"
+#

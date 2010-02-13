@@ -7,7 +7,11 @@ Dir.chdir File.dirname(__FILE__) + "/ext"
 
 #run extconf
 require './extconf'
+
 #make the shared library
-`make`
+#install the shared library
+
+`make print install`
 
 Dir.chdir prevdir
+
