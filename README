@@ -34,37 +34,16 @@ the most recent version.
 
   Besides the normal Ruby install, you'll need the ruby-devel package,
 which contains files needed for building Ruby extensions.
-
  
-IV. BUILDING
+IV. INSTALLATION
 
-  At the root directory of this archive, execute the following:
-
-    ruby setup.rb
-
-  If the module builds without errors, test it with this command:
+  [sudo] gem install tclink
+  
+V. TESTING
 
     ruby tctest.rb
 
   This script will run a test transaction and print the results.
-
-
-V. INSTALLATION
-
-  If you have root access to the machine, you will probably want to
-install TCLink as a global extension.  You can do this by copying the
-extension library (tclink.so) to your Ruby extensions directory, which
-is typically somewhere under /usr/lib/ruby, such as
-/usr/lib/ruby/1.6/i386-linux.
-
-  If you can't or don't want to install the module system wide, you can
-still use in a script by adding an absolute or relative path to the
-require 'tclink' invocation. For example:
-
-  require '/home/user/tclink'
-  
-  If you are running this in ruby on rails, you can vendor the gem and
-it will work fine.
 
 VI. USAGE
 
@@ -72,4 +51,13 @@ VI. USAGE
 through the TCLink API.  For further information, please consult the TC
 Developer's Guide, located in the doc subdirectory.
 
+VII. NOTE
 
+I packaged this up as a gem for my own uses. I am not affiliated with
+Trust Commerce and have not modified any of the C code.
+
+If you have trouble building this, you can download a tarball of the source
+from Trust Commerce's vault.
+
+--Keenan Brock
+keenan@thebrocks.net
