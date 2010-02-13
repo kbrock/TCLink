@@ -1,0 +1,75 @@
+Some countries have regulations on the use of cryptographic libraries
+like the ones embedded in TCLink. It may be unlawful to download TCLink
+in these countries.
+
+
+                                TCLink v3.4.4
+                            Ruby Implementation
+                       copyright (C) TrustCommerce 2007
+                         http://www.trustcommerce.com
+                         developer@trustcommerce.com
+
+                              July 13, 2007
+
+I. DESCRIPTION
+
+  TCLink is a thin client library to allow your e-commerce servers to
+connect to the TrustCommerce payment gateway easily and consistently.
+The protocol (which is the same across all platforms and languages) is
+well-documented in the Web Developer's Guide, so please consult it for
+any questions you may have about the protocol syntax itself.
+
+
+II. LICENSE
+
+  TCLink for Ruby is released under the GNU LGPL.  Please read LICENSE
+for details.
+
+
+III. REQUIREMENTS
+
+  You need to have the OpenSSL development libraries installed.  Versions
+prior to 0.9.6 may work, but are not supported; it is recommended you use
+the most recent version.
+
+  Besides the normal Ruby install, you'll need the ruby-devel package,
+which contains files needed for building Ruby extensions.
+
+ 
+IV. BUILDING
+
+  At the root directory of this archive, execute the following:
+
+    ruby setup.rb
+
+  If the module builds without errors, test it with this command:
+
+    ruby tctest.rb
+
+  This script will run a test transaction and print the results.
+
+
+V. INSTALLATION
+
+  If you have root access to the machine, you will probably want to
+install TCLink as a global extension.  You can do this by copying the
+extension library (tclink.so) to your Ruby extensions directory, which
+is typically somewhere under /usr/lib/ruby, such as
+/usr/lib/ruby/1.6/i386-linux.
+
+  If you can't or don't want to install the module system wide, you can
+still use in a script by adding an absolute or relative path to the
+require 'tclink' invocation. For example:
+
+  require '/home/user/tclink'
+  
+  If you are running this in ruby on rails, you can vendor the gem and
+it will work fine.
+
+VI. USAGE
+
+  The tctest.rb script shows a simple example of running transactions
+through the TCLink API.  For further information, please consult the TC
+Developer's Guide, located in the doc subdirectory.
+
+
