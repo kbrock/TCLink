@@ -20,7 +20,7 @@ unless File.exist?("config.h")
 
   version =''
   File.open("../tclink.gemspec", "r") { |f|
-    version = f.read.grep(/s\.version/).first.split(/['"]/)[1]
+    version = f.read.lines.grep(/s\.version/).first.split(/['"]/)[1]
   }
 
   #must at least have 3 digits in version string (e.g. "3.4")

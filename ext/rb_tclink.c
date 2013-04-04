@@ -48,8 +48,8 @@ tclink_send(VALUE obj, VALUE params) {
 		input_key = rb_funcall(input_keys, rb_intern("[]"), 1,
                                        INT2FIX(i));
 		input_value = rb_hash_aref(params, input_key);
-		TCLinkPushParam(handle, RSTRING(StringValue(input_key))->ptr,
-                                RSTRING(StringValue(input_value))->ptr);
+		TCLinkPushParam(handle, RSTRING_PTR(StringValue(input_key)),
+                                RSTRING_PTR(StringValue(input_value)));
 	}
 
 	/* send the transaction */
