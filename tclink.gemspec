@@ -9,7 +9,7 @@ spec=Gem::Specification.new do |s|
   s.homepage = "http://trustcommerce.com"
   s.require_path = 'ext'
   # s.has_rdoc = false
-  #s.author = "Some Person"
+  s.author = "Josh Puetz"
   s.email = "developer@trustcommerce.com"
   s.extensions = ["ext/extconf.rb"]
 
