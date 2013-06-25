@@ -8,8 +8,9 @@ spec=Gem::Specification.new do |s|
   s.description = "Trust Commerce connectivity layer"
   s.homepage = "http://trustcommerce.com"
   s.require_path = 'ext'
+  s.required_ruby_version = '>=1.9.2'
   # s.has_rdoc = false
-  #s.author = "Some Person"
+  s.author = "Josh Puetz"
   s.email = "developer@trustcommerce.com"
   s.extensions = ["ext/extconf.rb"]
 
